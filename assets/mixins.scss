@@ -1,0 +1,145 @@
+@mixin octaicon($background-color: #eee) {
+  width: 128px;
+  height: 128px;
+  background: red;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 32px solid transparent;
+    border-left: 32px solid $background-color;
+    border-right: 32px solid $background-color;
+    width: 128px;
+    height: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 32px solid transparent;
+    border-left: 32px solid $background-color;
+    border-right: 32px solid $background-color;
+    width: 128px;
+    height: 0;
+  }
+}
+
+@mixin arrow-box($background-color: #eee) {
+  position: relative;
+  background: #88b7d5;
+  border: 4px solid #c2e1f5;
+
+  &::after, &::before {
+    bottom: 100%;
+    left:14%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #88b7d5;
+    border-width: 16px;
+    margin-left: -16px;
+  }
+
+  &::before {
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: #c2e1f5;
+    border-width: 22px;
+    margin-left: -22px;
+  }
+}
+
+@mixin ward-box($background-color: #eee) {
+  margin-top: 300px;
+  padding: 56px 30px;
+
+  h1 {
+    margin-bottom: 24px;
+
+    font-size: 32px;
+    text-align: center;
+  }
+
+  h2 {
+    margin: 24px 0;
+
+    font-size: 24px;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    li {
+      width: 45%;
+
+      img {
+        width: 100%;
+      }
+
+      &.comment {
+        .octaicon {
+          margin: 0 0 0 32px;
+
+          @include octaicon($background-color);
+        }
+
+        .arrow-box {
+          margin: 38px 32px;
+          padding: 24px 12px;
+
+          line-height: 1.5;
+
+          @include arrow-box($background-color);
+        }
+      }
+    }
+
+    &.shelf {
+      li {
+        width: 36%;
+
+        & + li {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    &.prize {
+      display: block;
+
+      margin: 24px 0;
+      text-align: center;
+
+      li {
+        width: 100%;
+        font-size: 18px;
+        line-height: 1.8;
+
+        i {
+          color: rgb(191, 155, 48);
+        }
+
+        &.big {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

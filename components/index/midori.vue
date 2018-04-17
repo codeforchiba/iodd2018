@@ -19,7 +19,7 @@
         <img src="~/assets/midori/pic_1.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/midori/icon.jpg">
         </div>
         <p class="arrow-box">ふくたにさんのことば</p>

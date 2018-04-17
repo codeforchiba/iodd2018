@@ -7,7 +7,7 @@
         <img src="~/assets/chuo/pic_2.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/chuo/icon.jpg">
         </div>
         <p class="arrow-box">あしはらさんのことば</p>

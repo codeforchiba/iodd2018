@@ -37,10 +37,12 @@ module.exports = {
     }
   },
   css: [
-    'video.js/dist/video-js.css',
-    '~/assets/global.scss'
+    'video.js/dist/video-js.css'
   ],
   modules: [
     '@nuxtjs/font-awesome'
+  ],
+  plugins: [
+    '~/plugins/mq'
   ]
 }

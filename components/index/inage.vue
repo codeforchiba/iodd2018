@@ -19,7 +19,7 @@
         <img src="~/assets/inage/pic_1.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/inage/icon.jpg">
         </div>
         <p class="arrow-box">まえのさんのことば</p>
@@ -51,6 +51,6 @@
     @include ward-box($inage-color);
 
     background-color: $inage-color;
-    color: white;
+    color: black;
   }
 </style>

@@ -7,7 +7,7 @@
         <img src="~/assets/hanamigawa/pic_1.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/hanamigawa/icon.jpg">
         </div>
         <p class="arrow-box">さとうさんのことば</p>

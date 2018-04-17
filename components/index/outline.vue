@@ -1,6 +1,7 @@
 <template>
   <section id="outline">
-    <h1>シビックパワーバトル 千葉市６区対抗戦 in IODD 2018</h1>
+    <h1>シビックパワーバトル アーカイブ</h1>
+    <p class="caption">千葉市６区対抗戦 in IODD 2018</p>
     <p class="date">2018年3月3日(土) 10:00</p>
     <p class="location">きぼーる 1F アトリウム</p>
 
@@ -22,51 +23,32 @@
 </template>
 
 <style lang="scss" scoped>
-#outline {
-  margin-top: 520px;
-  padding: 56px 30px;
+@import "assets/variables.scss";
+@import "assets/mixins.scss";
 
-  background-color: rgb(168, 6, 25);
+#outline {
+  $outline-color: rgb(168, 6, 25);
+  @include content-box($outline-color);
+
+  background-color: $outline-color;
   color: white;
 
   h1 {
     margin-bottom: 24px;
-
-    font-size: 32px;
-    text-align: right;
+    word-break: keep-all;
   }
 
   h2 {
     margin: 16px 0;
-
-    text-align: center;
   }
 
   p {
     line-height: 1.5;
-
-    &.date, &.location {
-      text-align: right;
-    }
-
-    &.description {
-    }
   }
 
   ul {
     list-style-type: none;
-
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
-    li {
-      width: 45%;
-
-      & + li {
-        margin-left: 24px;
-      }
-    }
+    padding: 0;
   }
 
   img {
@@ -74,7 +56,63 @@
     width: 100%;
     margin: 36px 0;
 
-    object-fit: contain;
+    vertical-align: bottom;
+  }
+
+  @media screen and (max-width: #{$phone-max}) {
+    h1 {
+      padding: 0 24px;
+    }
+
+    p {
+      margin: 0 16px;
+
+      &.caption, &.date, &.location {
+        text-align: center;
+      }
+
+      &.caption {
+        margin-bottom: 24px;
+      }
+    }
+
+    img {
+      margin: 36px 0 0;
+    }
+  }
+
+  @media screen and (min-width: #{$phone-over}) {
+    margin-top: 520px;
+    padding: 56px 30px;
+
+    h1 {
+      font-size: 32px;
+      text-align: right;
+    }
+
+    p {
+      &.date, &.location {
+        text-align: right;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+      li {
+        width: 45%;
+
+        & + li {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    img {
+      margin: 36px 0;
+    }
   }
 }
 </style>

@@ -1,0 +1,10 @@
+{
+  "indent": 2,
+  "globalstrict": false,
+  "es3": true,
+  "unused": true,
+  "undef": true,
+  "trailing": true,
+  "laxcomma": true,
+  "loopfunc": true
+}

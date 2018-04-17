@@ -1,31 +1,15 @@
-@mixin octaicon($background-color: #eee) {
-  width: 128px;
-  height: 128px;
-  background: red;
-  position: relative;
+@import "assets/variables.scss";
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom: 32px solid transparent;
-    border-left: 32px solid $background-color;
-    border-right: 32px solid $background-color;
+@mixin circle-icon($background-color: #eee) {
+  img {
     width: 128px;
-    height: 0;
-  }
+    height: 128px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-top: 32px solid transparent;
-    border-left: 32px solid $background-color;
-    border-right: 32px solid $background-color;
-    width: 128px;
-    height: 0;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -33,6 +17,7 @@
   position: relative;
   background: #88b7d5;
   border: 4px solid #c2e1f5;
+  color: white;
 
   &::after, &::before {
     bottom: 100%;
@@ -60,72 +45,61 @@
   }
 }
 
-@mixin ward-box($background-color: #eee) {
-  margin-top: 300px;
-  padding: 56px 30px;
-
+@mixin content-box($background-color: #eee) {
   h1 {
-    margin-bottom: 24px;
-
-    font-size: 32px;
     text-align: center;
   }
 
   h2 {
-    margin: 24px 0;
-
-    font-size: 24px;
     text-align: center;
   }
+
+  @media screen and (max-width: #{$phone-max}) {
+    padding: 24px 0 0;
+
+    h1 {
+      font-weight: normal;
+      font-size: 24px;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 20px;
+      margin: 24px 12px;
+    }
+  }
+
+  @media screen and (min-width: #{$phone-over}) {
+    margin-top: 300px;
+    padding: 56px 30px;
+
+    h1 {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    h2 {
+      margin: 24px 0;
+      font-size: 24px;
+    }
+  }
+}
+
+@mixin ward-box($background-color: #eee) {
+  @include content-box($background-color);
 
   ul {
     list-style-type: none;
     padding: 0;
 
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
     li {
-      width: 45%;
-
       img {
         width: 100%;
-      }
-
-      &.comment {
-        .octaicon {
-          margin: 0 0 0 32px;
-
-          @include octaicon($background-color);
-        }
-
-        .arrow-box {
-          margin: 38px 32px;
-          padding: 24px 12px;
-
-          line-height: 1.5;
-
-          @include arrow-box($background-color);
-        }
-      }
-    }
-
-    &.shelf {
-      li {
-        width: 36%;
-
-        & + li {
-          margin-left: 24px;
-        }
       }
     }
 
     &.prize {
       display: block;
-
-      margin: 24px 0;
-      text-align: center;
 
       li {
         width: 100%;
@@ -139,6 +113,90 @@
         &.big {
           font-size: 28px;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: #{$phone-max}) {
+    padding-bottom: 24px;
+
+    h1 {
+      margin-bottom: 24px;
+    }
+
+    ul {
+      li {
+        &.comment {
+          .icon {
+            padding: 18px 0;
+            text-align: center;
+
+            @include circle-icon($background-color);
+          }
+
+          .arrow-box {
+            margin: 0px 32px;
+            padding: 24px 12px;
+
+            line-height: 1.5;
+
+            @include arrow-box($background-color);
+          }
+        }
+      }
+
+      &.shelf {
+        li {
+          margin: 24px;
+        }
+      }
+
+      &.prize {
+        margin: 24px;
+      }
+    }
+  }
+
+  @media screen and (min-width: #{$phone-over}) {
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+      li {
+        width: 45%;
+
+        &.comment {
+          .icon {
+            margin: 0 0 0 32px;
+
+            @include circle-icon($background-color);
+          }
+
+          .arrow-box {
+            margin: 38px 32px;
+            padding: 24px 12px;
+
+            line-height: 1.5;
+
+            @include arrow-box($background-color);
+          }
+        }
+      }
+
+      &.shelf {
+        li {
+          width: 36%;
+
+          & + li {
+            margin-left: 24px;
+          }
+        }
+      }
+
+      &.prize {
+        margin: 24px 0;
+        text-align: center;
       }
     }
   }

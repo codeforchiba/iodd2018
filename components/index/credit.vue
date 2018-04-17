@@ -6,9 +6,9 @@
     <p>千葉市</p>
     <h2>共催</h2>
     <ul>
-      <li>NPO法人 Code for Chiba | <a href="http://www.code4chiba.org/">http://www.code4chiba.org/</a></li>
-      <li>ぺんぎん不動産 | <a href="https://www.facebook.com/penguins.community/">https://www.facebook.com/penguins.community/</a></li>
-      <li>ちば○○部 | <a href="http://chiba-rucy.com/">http://chiba-rucy.com/</a></li>
+      <li><a href="http://www.code4chiba.org/" target="_blank"><img src="~/assets/logo_cfc.jpg" alt="NPO法人 Code for Chiba"></a></li>
+      <li><a href="https://www.facebook.com/penguins.community/" target="_blank">ぺんぎん不動産</a></li>
+      <li><a href="http://chiba-rucy.com/" target="_blank">ちば○○部</a></li>
     </ul>
     <h2>協力</h2>
     <ul>
@@ -22,26 +22,15 @@
 </template>
 
 <style lang="scss" scoped>
+@import "assets/variables.scss";
+@import "assets/mixins.scss";
+
 footer {
-  margin-top: 520px;
-  padding: 56px 30px;
+  $credit-color: rgb(168, 6, 25);
+  @include content-box($credit-color);
 
-  background-color: rgb(168, 6, 25);
+  background-color: $credit-color;
   color: white;
-
-  h1 {
-    margin-bottom: 24px;
-
-    font-size: 32px;
-    text-align: center;
-  }
-
-  h2 {
-    font-weight: normal;
-    margin: 32px 0;
-
-    text-align: center;
-  }
 
   p {
     text-align: center;
@@ -60,13 +49,50 @@ footer {
       line-height: 1.5;
 
       a:link, a:visited {
-        color: darkblue;
+        color: $link-color;
+      }
+
+      & + li {
+        margin-top: 16px;
       }
     }
   }
 
-  img {
-    width: 600px;
+  @media screen and (max-width: #{$phone-max}) {
+    h1, h2 {
+      margin: 24px 0;
+    }
+
+    ul {
+      li {
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: #{$phone-over}) {
+    h2 {
+      font-weight: normal;
+      margin: 32px 0;
+    }
+
+    ul {
+      li {
+        img {
+          width: 320px;
+        }
+      }
+    }
+
+    img {
+      width: 600px;
+    }
   }
 }
 </style>

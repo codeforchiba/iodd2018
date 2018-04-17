@@ -13,7 +13,7 @@
         <img src="~/assets/wakaba/pic_1.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/wakaba/icon.jpg">
         </div>
         <p class="arrow-box">るすさんのことば</p>

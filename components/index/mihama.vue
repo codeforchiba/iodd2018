@@ -19,7 +19,7 @@
         <img src="~/assets/mihama/pic_1.jpg">
       </li>
       <li class="comment">
-        <div class="octaicon">
+        <div class="icon">
           <img src="~/assets/mihama/icon.jpg">
         </div>
         <p class="arrow-box">せんせいのおことば</p>

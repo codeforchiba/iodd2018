@@ -16,7 +16,7 @@
       <li>シビックパワーアライアンス</li>
     </ul>
     <p class="cover">
-      <img src="~/assets/chiba6.jpg">
+      <img src="/chiba6.jpg">
     </p>
   </footer>
 </template>
@@ -34,6 +34,7 @@ footer {
 
   p {
     text-align: center;
+    word-break: keep-all;
 
     &.cover {
       margin-top: 60px;

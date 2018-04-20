@@ -1,7 +1,7 @@
 <template>
   <section id="outline">
-    <h1>シビックパワーバトル アーカイブ</h1>
-    <p class="caption">千葉市６区対抗戦 in IODD 2018</p>
+    <h1>IODD 2018 アーカイブ</h1>
+    <p class="caption">シビックパワーバトル 千葉市６区対抗戦</p>
     <p class="date">2018年3月3日(土) 10:00</p>
     <p class="location">きぼーる 1F アトリウム</p>
 
@@ -91,7 +91,7 @@
     }
 
     p {
-      &.date, &.location {
+      &.caption, &.date, &.location {
         text-align: right;
       }
     }

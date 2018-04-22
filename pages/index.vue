@@ -22,6 +22,7 @@
       <midori></midori>
       <mihama></mihama>
       <media></media>
+      <supporter></supporter>
       <credit></credit>
     </section>
   </div>
@@ -39,6 +40,7 @@ import Wakaba from '~/components/index/wakaba.vue'
 import Midori from '~/components/index/midori.vue'
 import Mihama from '~/components/index/mihama.vue'
 import Media from '~/components/index/media.vue'
+import Supporter from '~/components/index/supporter.vue'
 import Credit from '~/components/index/credit.vue'
 
 export default {
@@ -54,6 +56,7 @@ export default {
     midori: Midori,
     mihama: Mihama,
     media: Media,
+    supporter: Supporter,
     credit: Credit
   }
 }

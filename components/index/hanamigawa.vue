@@ -10,7 +10,7 @@
         <div class="icon">
           <img src="~/assets/hanamigawa/icon.jpg">
         </div>
-        <p class="arrow-box">さとうさんのことば</p>
+        <p class="arrow-box">どんなデータを僕らは欲しているのか、必要になった時に誰に相談すれば良いのかが分かりました。チームとしては、花見川区の魅力をまだまだ外に発信できていないことがたくさんあることに気付きました。ありがとうございました。</p>
       </li>
     </ul>
 

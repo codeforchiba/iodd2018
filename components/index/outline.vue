@@ -16,8 +16,6 @@
       </li>
     </ul>
 
-    <p>参加者数 ９８人</p>
-
     <img src="~/assets/index_outline.jpg">
   </section>
 </template>

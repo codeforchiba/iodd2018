@@ -10,7 +10,7 @@
         <div class="icon">
           <img src="~/assets/chuo/icon.jpg">
         </div>
-        <p class="arrow-box">あしはらさんのことば</p>
+        <p class="arrow-box">中央区、面白い構想はいろいろ出てきたのですが、プレゼンの準備不足で不完全燃焼でした。チームのアイデアをまとめられず反省ばかりですが、次回があればリベンジしたいと思います(*´ω｀*)</p>
       </li>
     </ul>
 

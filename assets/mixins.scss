@@ -1,6 +1,6 @@
 @import "assets/variables.scss";
 
-@mixin circle-icon($background-color: #eee) {
+@mixin circle-icon {
   img {
     width: 128px;
     height: 128px;
@@ -13,35 +13,75 @@
   }
 }
 
-@mixin arrow-box($background-color: #eee) {
+@mixin arrow-box {
   position: relative;
-  background: #88b7d5;
-  border: 4px solid #c2e1f5;
+  background: $arrow-box-background;
+  border: 3px solid $arrow-box-border;
+  border-radius: 6px;
   color: white;
 
   &::after, &::before {
-    bottom: 100%;
-    left:14%;
+    position: absolute;
     border: solid transparent;
     content: " ";
     height: 0;
     width: 0;
-    position: absolute;
     pointer-events: none;
   }
 
   &::after {
-    border-color: rgba(136, 183, 213, 0);
-    border-bottom-color: #88b7d5;
+    border-color: rgba($arrow-box-background, 0);
     border-width: 16px;
+  }
+
+  &::before {
+    border-color: rgba($arrow-box-border, 0);
+    border-width: 22px;
+  }
+}
+
+@mixin arrow-box-top {
+  @include arrow-box;
+
+  &::after, &::before {
+    bottom: 100%;
+
+    @media screen and (max-width: #{$phone-max}) {
+      left: 50%;
+    }
+
+    @media screen and (min-width: #{$phone-over}) {
+      left: 14%;
+    }
+  }
+
+  &::after {
+    border-bottom-color: $arrow-box-background;
     margin-left: -16px;
   }
 
   &::before {
-    border-color: rgba(194, 225, 245, 0);
-    border-bottom-color: #c2e1f5;
-    border-width: 22px;
+    border-bottom-color: $arrow-box-border;
     margin-left: -22px;
+  }
+}
+
+@mixin arrow-box-left {
+  @include arrow-box;
+
+  &::after, &::before {
+    top: 50%;
+    right: 100%;
+  }
+
+  &::after {
+    border-right-color: $arrow-box-background;
+    margin-top: -16px;
+  }
+
+  &::before {
+    border-right-color: $arrow-box-border;
+    margin-top: -22px;
   }
 }
 
@@ -131,16 +171,16 @@
             padding: 18px 0;
             text-align: center;
 
-            @include circle-icon($background-color);
+            @include circle-icon;
           }
 
           .arrow-box {
-            margin: 0px 32px;
+            margin: 8px 32px 0;
             padding: 24px 12px;
 
             line-height: 1.5;
 
-            @include arrow-box($background-color);
+            @include arrow-box-top;
           }
         }
       }
@@ -170,16 +210,16 @@
           .icon {
             margin: 0 0 0 32px;
 
-            @include circle-icon($background-color);
+            @include circle-icon;
           }
 
           .arrow-box {
             margin: 38px 32px;
-            padding: 24px 12px;
+            padding: 12px 12px;
 
             line-height: 1.5;
 
-            @include arrow-box($background-color);
+            @include arrow-box-top;
           }
         }
       }

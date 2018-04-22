@@ -22,7 +22,7 @@
         <div class="icon">
           <img src="~/assets/midori/icon.jpg">
         </div>
-        <p class="arrow-box">ふくたにさんのことば</p>
+        <p class="arrow-box">日頃感じている魅力の根拠（データ）を探し、成績の良いデータに基づいてストーリーを考えるという双方向のアプローチを楽しみました。snsを活用して機会が少なかったface to faceをカバーしましたが、想定外の金賞はチームメンバーそれぞれの本領発揮の賜物です。 ありがとうございました♪</p>
       </li>
     </ul>
 

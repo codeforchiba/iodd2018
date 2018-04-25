@@ -22,7 +22,7 @@
         <div class="icon">
           <img src="~/assets/inage/icon.jpg">
         </div>
-        <p class="arrow-box">まえのさんのことば</p>
+        <p class="arrow-box">(後日掲載)</p>
       </li>
     </ul>
 

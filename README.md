@@ -1,22 +1,19 @@
-# iodd2018
+# IODD 2018 アーカイブ
 
-> Nuxt.js project
+## セットアップ
 
-## Build Setup
+Node.js 及び yarn を事前にインストールしてください。
+
+* Node.js (https://nodejs.org/ja/)
+* yarn (https://yarnpkg.com/ja/)
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
+# 開発環境整備
+$ yarn
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# ローカルで実行する
+$ yarn dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+# コンテンツの生成
+$ yarn generate
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

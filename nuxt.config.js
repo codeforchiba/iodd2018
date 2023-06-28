@@ -1,5 +1,6 @@
 module.exports = {
-  mode: "spa",
+  mode: 'spa',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -29,31 +30,15 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
-  build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  },
   css: [
     'video.js/dist/video-js.css'
   ],
-  modules: [
+  buildModules: [
     '@nuxtjs/font-awesome',
-    ['@nuxtjs/google-analytics', {
-      id: process.env.GA_TRACKING_ID
+    '@nuxtjs/eslint-module',
+    ['@nuxtjs/google-gtag', {
+      id: process.env.GA_TRACKING_ID,
+      debug: true
     }]
   ],
   plugins: [
